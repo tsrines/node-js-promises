@@ -28,8 +28,7 @@ A good way to start understanding Promises is actually just to pay some attentio
 Now we are getting pretty close to understanding javascript Promises. At its most basic, a javascript Promise is really just a special kind of object that makes two promises to us. These promises are:
 
 1. I, Promise object, promise to tell you when I have either fulfilled (resolved) or failed to fulfill (rejected) my promise to you.
-2. When I fullfill (resolve) my promise or fail to fullfill (reject) my promise to you, I will provide you with the specified value (if you've asked for one).
-
+2. I, Promise object, promise to provide you with the specified value(s), if specified, at the moment that I tell you that I've fulfilled my promise; or, if I fail to fulfill my promise, I will give you a reason why.
 
 
 ## Resources
