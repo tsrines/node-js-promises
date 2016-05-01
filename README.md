@@ -30,13 +30,28 @@ Now we are getting pretty close to understanding javascript Promises. At its mos
 1. I, Promise object, promise to tell you when I have either fulfilled (resolved) or failed to fulfill (rejected) my promise to you.
 2. I, Promise object, promise to provide you with the specified value(s), if specified, at the moment that I tell you that I've fulfilled my promise; or, if I fail to fulfill my promise, I will give you a reason why.
 
+Okay, so that's what a promise is conceptually. Now let's look at what that looks like in code. When we use Promises in our code we usually call a function that has been designed to return a Promise object. We'll go a bit more deeply into this in a bit, but for the moment let's just say we have a function `makeLoan(amountInUSD, interestRate)` that takes a promise and when it has finished supplies the amount of the original loan plus the correct interest earned. This is how we'd use that function:
+
+```javascript
+makeLoan('10', '.05')
+  .then((amountPaid) => {
+    console.log(amountPaidback);
+  }).catch((reason) {
+    console.log(reason);
+  });
+```
+
+This is a very simple example, but it expresses the core of the promises that a javascript Promise makes. The first promise (#1 above) is evident in the "chained" `then()` and `catch()` functions that are called after on the Promise object returned by `makeLoan`; the second (#2 above), is present in the argument `amountPaidback` supplied to the anonymous function supplied to `then`. Now if you're feeling confused by the "chaining" here, remember that we've seen this before when we used jQuery, e.g. `$('.some-div').show().hide()`. All that's happening here is that the `show` and `hide` functions are being called on the object that is returned by each previous method in the chain of functions. The jQuery API guarantees that each function returns objects that contain the methods in its library. Similarly, the Promises specification guarantees that all Promises will have a `then` method that when called returns the Promise object in question. Indeed, the [Promise/A+](http://promisesaplus.com) specification, which is the most influential Promises spec, states: "[A] 'promise' is an object or function with a then method...."[^1] 
+
 
 ## Resources
 
 * The [Promise/A=](https://promisesaplus.com/) Specification.
 
 
+[^1]: https://promisesaplus.com/#point-6
+
 Points to get made:
 
 * Benefits of Promises: 1) sequentiality; 2) uninversion of control. 
-*
+
