@@ -49,6 +49,7 @@ If you're feeling confused by the "chaining" here, remember that we've seen this
 
 Similarly, the Promises specification guarantees that all Promises will have a `then` method that when called returns the Promise object in question. Indeed, the [Promise/A+](http://promisesaplus.com) specification, which is the most influential Promises spec, defines promises in terms of the then method, stating bluntly: "[A] 'promise' is an object or function with a then method...."[^1] 
 
+Okay, so now we have a pretty good introduction to Promises. Let's use them!
 
 ## Resources
 
