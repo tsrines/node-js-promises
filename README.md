@@ -17,7 +17,9 @@ Excellent point. As we saw in the last lesson, the the async library really help
 
 And yet the the async library does have weaknesses. Its weaknesses, though, are probably the best kind to have because they are weaknesses that arise from its main strength: namely, it provides a beautiful but simple interface (or layer) on top of the basic pattern of callbacks. The beauty of this is that as long as you're familiar with callbacks you can pretty quickly start to use the async library. You'll still be writing callbacks.
 
-But this is precisely the problem with the async library. When we use it we are still essentially writing callbacks, and we are still locked into some of their limitations. What if we could do better? What if, for instance, we had a way to handle asynchrony that allowed us to reason about the values and the events before they were present? Now that would be something! This is probably a fairly abstract idea at this point, and that's entirely appropriate. Let's break it down a bit.
+But this is precisely the problem with the async library. When we use it, we are still essentially writing callbacks, and we are still locked into some of their limitations. What if we could do better? What if, for instance, we had a way to handle asynchrony that allowed us to reason about the values and the events before they were present? Now that would be something!
+
+This is probably a fairly abstract idea at this point, and that's entirely appropriate. Let's break it down a bit.
 
 ## What's in a Promise?
 
