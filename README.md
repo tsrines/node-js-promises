@@ -41,7 +41,11 @@ makeLoan('10', '.05')
   });
 ```
 
-This is a very simple example, but it expresses the core of the promises that a javascript Promise makes. The first promise (#1 above) is evident in the "chained" `then()` and `catch()` functions that are called after on the Promise object returned by `makeLoan`; the second (#2 above), is present in the argument `amountPaidback` supplied to the anonymous function supplied to `then`. Now if you're feeling confused by the "chaining" here, remember that we've seen this before when we used jQuery, e.g. `$('.some-div').show().hide()`. All that's happening here is that the `show` and `hide` functions are being called on the object that is returned by each previous method in the chain of functions. The jQuery API guarantees that each function returns objects that contain the methods in its library. Similarly, the Promises specification guarantees that all Promises will have a `then` method that when called returns the Promise object in question. Indeed, the [Promise/A+](http://promisesaplus.com) specification, which is the most influential Promises spec, states: "[A] 'promise' is an object or function with a then method...."[^1] 
+This is a very simple example, but it expresses the core of the promises that a javascript Promise makes. The first promise (#1 above) is evident in the "chained" `then()` and `catch()` functions that are called after on the Promise object returned by `makeLoan`; the second (#2 above), is present in the argument `amountPaidback` supplied to the anonymous function supplied to `then`.
+
+If you're feeling confused by the "chaining" here, remember that we've seen this before when we used jQuery, e.g. `$('.some-div').show().hide()`. All that's happening here is that the `show` and `hide` functions are being called on the object that is returned by each previous method in the chain of functions. The jQuery API guarantees that each function returns objects that contain the methods in its library.
+
+Similarly, the Promises specification guarantees that all Promises will have a `then` method that when called returns the Promise object in question. Indeed, the [Promise/A+](http://promisesaplus.com) specification, which is the most influential Promises spec, defines promises in terms of the then method, stating bluntly: "[A] 'promise' is an object or function with a then method...."[^1] 
 
 
 ## Resources
