@@ -53,6 +53,8 @@ Similarly, the Promises specification guarantees that all Promises will have a `
 
 Okay, so now we have a pretty good introduction to Promises. Let's use them!
 
+## Code-Along: 
+
 ## Resources
 
 * The [Promise/A=](https://promisesaplus.com/) Specification.
