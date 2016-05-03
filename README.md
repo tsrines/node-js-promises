@@ -29,7 +29,7 @@ A good way to start understanding Promises is actually just to pay some attentio
 
 ![Ciara Promises Animated Gif](https://s3.amazonaws.com/ezmiller/public/flatiron-imgs/promise-asynchrony.gif)
 
-"I promise I'll pay you back your $10 dollars." If I make such a promise to my friend, what I'm saying is that an ascynhronous process has begun that when it has completed will result in them having $10 dollars.  She doesn't know when that money will arrive, only that it will at some point. Taking this a bit further, if I were to give her a symbol of this promise, an IOU, that IOU would represent the value (the future value, if you will) of my promise once I have made good on it.
+"I promise I'll pay you back your $10 dollars." If I make such a promise to my friend, what I'm saying, essentially, is that an ascynhronous process has begun that when it has completed will result in them having $10 dollars.  She doesn't know when that money will arrive, only that it will at some point. Taking this a bit further, if I were to give her a symbol of this promise, an IOU, that IOU would represent the value (the future value, if you will) of my promise once I have made good on it.
 
 Now we are getting pretty close to understanding javascript Promises. At its most basic, a javascript Promise is really just a special kind of object that makes two promises to us. These promises are:
 
@@ -51,11 +51,13 @@ This is a very simple example, but it expresses the core of the promises that a 
 
 If you're feeling confused by the "chaining" here, remember that we've seen this before when we used jQuery, e.g. `$('.some-div').show().hide()`. All that's happening here is that the `show` and `hide` functions are being called on the object that is returned by each previous method in the chain of functions. The jQuery API guarantees that each function returns objects that contain the methods in its library.
 
-Similarly, the Promises specification guarantees that all Promises will have a `then` method that when called returns the Promise object in question. Indeed, the [Promise/A+](http://promisesaplus.com) specification, which is the most influential Promises spec, defines promises in terms of the then method, stating bluntly: "[A] 'promise' is an object or function with a then method...."[^1] 
+Similarly, the Promises specification guarantees that all Promises will have a `then` method that when called returns the Promise object in question. Indeed, the [Promise/A+](http://promisesaplus.com) specification, which is the most influential Promises spec, defines promises in terms of the then method, stating bluntly: "[A] 'promise' is an object or function with a then method...."[^1]. And a then method, the spec continues, is just a method that "registers callbacks to receive either a promise's eventual value or the reason why he promise cannot be fulfilled." 
 
-Okay, so now we have a pretty good introduction to Promises. Let's use them!
+But wait, you say, what about the `catch` function? Good point. Well, if you noticed in the above definition, the spec says that the `then` method allows us to register *multiple* callbacks -- yes we are still using callbacks -- and one of these callbacks takes the eventual value, while the other accepts a reason the promise failed. The actual signature of the `then` function therefore is: `then(onFulfilled, onRejected)`. And the `catch` method is just a shorthand for calling `then` with only a rejection callback handler, like so: `then(null, rejectionCallback)`.
 
-## Code-Along: 
+Okay, so that's pretty much it! Now you know, basically, what a promise is. Let's use them!
+
+## Code-Along:
 
 ## Resources
 
