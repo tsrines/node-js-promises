@@ -61,7 +61,7 @@ Okay, so that's pretty much it! Now you know, basically, what a promise is. Let'
 
 ## Resources
 
-* The [Promise/A=](https://promisesaplus.com/) Specification.
+* The [Promise/A+](https://promisesaplus.com/) Specification.
 
 
 [^1]: https://promisesaplus.com/#point-6
