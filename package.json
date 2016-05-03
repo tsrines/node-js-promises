@@ -1,0 +1,23 @@
+{
+  "name": "node-js-promises",
+  "version": "1.0.0",
+  "description": "Promises Code-Along",
+  "main": "promises-example.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/learn-co-curriculum/node-js-promises.git"
+  },
+  "keywords": [
+    "node",
+    "promises"
+  ],
+  "author": "Ethan Miller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/learn-co-curriculum/node-js-promises/issues"
+  },
+  "homepage": "https://github.com/learn-co-curriculum/node-js-promises#readme"
+}
