@@ -55,7 +55,7 @@ Similarly, the Promises specification guarantees that all Promises will have a `
 
 But wait, you say, what about the `catch` function? Good point. Well, if you noticed in the above definition, the spec says that the `then` method allows us to register *multiple* callbacks -- yes we are still using callbacks -- and one of these callbacks takes the eventual value, while the other accepts a reason the promise failed. The actual signature of the `then` function therefore is: `then(onFulfilled, onRejected)`. And the `catch` method is just a shorthand for calling `then` with only a rejection callback handler, like so: `then(null, rejectionCallback)`.
 
-Okay, so that's pretty much it! Now you know, basically, what a promise is. Let's use them!
+Okay, so that's pretty much it! Now you know, basically, what's in a Promise. Let's use them!
 
 ## Code-Along:
 
