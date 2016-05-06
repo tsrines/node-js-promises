@@ -59,7 +59,7 @@ But wait, you say, what about the `catch` function? Good point. Well, if you not
 makeLoan('10', 0.5')
   .then((amountPaid) => {
     console.log(amountPaidback)
-  }).catch(null, (reason) => {
+  }).then(null, (reason) => {
     console.log(reason);
   });
 ```
