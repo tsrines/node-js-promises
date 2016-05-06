@@ -253,7 +253,7 @@ Now when you run this code you should see that the market table now contains the
 ## Resources
  
 * The [Promise/A+](https://promisesaplus.com/) Specification.
-*  
+* Kyle Simpson, ["Promises"](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20&%20performance/ch3.md) in You Don't Know JS: Async & Performance. 
 
 [^1]: https://promisesaplus.com/#point-6
 
