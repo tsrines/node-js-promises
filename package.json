@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/learn-co-curriculum/node-js-promises#readme",
   "dependencies": {
-    "bluebird": "^3.3.5",
     "knex": "^0.10.0",
     "pg": "^4.5.5"
   }
