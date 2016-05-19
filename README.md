@@ -71,7 +71,6 @@ Okay, so that's pretty much it! In sum: A promise is an object or function with 
 In this code-along, what we'll do is play around with some async operations using a database and http requests. The scenario is that we've been tasked by a client with collecting some data about flea markets in the United States. And it just so happens that the United States Department of Agriculture has provided an open source dataset with an API that we can query to collect some of this data. So what we'll be doing is writing a simple JavaScript script to pull data from the web and insert into a Postgres database.
 
 ### 1. Getting Going
-
 Let's begin by getting things set up and going through some preliminary code already provided. Your lesson directory includes a package.json file with the necessary dependencies already supplied so we can just do an `npm install` to get things started. Go ahead and do that now.
 
 Now if you open `promises-example.js`, you'll see that there's some code already present. In this code-along, we'll be using a library called [knex](http://knexjs.org) in connection with another library called [pg](https://github.com/brianc/node-postgres) for our database input/output (I/O) operations. The pg library is easy: it provides an interface the Postgres database that we'll be using for this exercise. The knex library, which is the library that we'll really be using, adds an additional layer on top of pg, which further simplifies (or "abstracts") us away from the specifics of the database we are using.
