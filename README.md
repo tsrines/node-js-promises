@@ -100,7 +100,7 @@ What we have here is function declaration for `queryUSDAFarmersMarkets` that tak
 
 In the logic of our function, what we are doing is using the *request* module to call the API. Once the request has returned, we then check for an error in the request. If there's been an error we call `reject` and supply the error as the "reason" for the Promises failure. If, on the other hand, the request completed successfully we call `resolve` and supply the response body as the Promises final resolved value. Pretty logical and easy to understand, no? Hopefully, seeing the internals of a function that has been "promisified" helps to clarify how Promises end up either failing or resolving.
 
-### 2. Taking our Custom Promies for a Spin (Plus Learning about Promise Error Handling)
+### 2. Taking our Custom Promises for a Spin (Plus Learning about Promise Error Handling)
 
 But now let's get to the point where we can use this Promise! Let's first just get ourselves to the point where we are getting a response from the USDA servers by fetching a list of the farmer's markets near the Flatiron School. This will be useful because we can see in what for the data comes back. Open our file, enter the following code, and then do `node promises-example.js` to run it:
 
@@ -264,3 +264,5 @@ Now when you run this code you should see that the market table now contains the
 * Kyle Simpson, ["Promises"](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20&%20performance/ch3.md) in You Don't Know JS: Async & Performance.
 
 [^1]: https://promisesaplus.com/#point-6
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/node-js-promises'>Promises</a> on Learn.co and start learning to code for free.</p>
