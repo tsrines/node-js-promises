@@ -76,7 +76,7 @@ Let's begin by getting things set up and going through some preliminary code alr
 
 Now if you open `promises-example.js`, you'll see that there's some code already present. In this code-along, we'll be using a library called [knex](http://knexjs.org) in connection with another library called [pg](https://github.com/brianc/node-postgres) for our database input/output (I/O) operations. The pg library is easy: it provides an interface the Postgres database that we'll be using for this exercise. The knex library, which is the library that we'll really be using, adds an additional layer on top of pg, which further simplifies (or "abstracts") us away from the specifics of the database we are using.
 
-> Note: The knex library is what we call an ORM (or Object Relational Mapping) tool. You'll likely run into other ORMs in your career. Basically, what they do is provide a "virtual" database object that can be manipulated within a programming environment using a syntax that is distinct from the one the actual database uses. ORMs provide two important advantages: 1) The language or API that they provide for manipulating the database can be made to be easier to understand and read (or what programmer's call "expressive"); 2) because they provide an independent API for the database, ORMs can usually be used interchangeably with different types of databases. That means you can change your database withotu needing to change your code!
+> Note: The knex library is what we call an ORM (or Object Relational Mapping) tool. You'll likely run into other ORMs in your career. Basically, what they do is provide a "virtual" database object that can be manipulated within a programming environment using a syntax that is distinct from the one the actual database uses. ORMs provide two important advantages: 1) The language or API that they provide for manipulating the database can be made to be easier to understand and read (or what programmers call "expressive"); 2) because they provide an independent API for the database, ORMs can usually be used interchangeably with different types of databases. That means you can change your database withotu needing to change your code!
 
 The first set of lines of code already present in the `promises-example.js` file (until about Line 17) configure our database connection. As this configuration is unique to knex itself, let's just accept it for now. The next it of code is a function that we've provided that can be used to query the Department of Agriculture's farmer's market API.
 
@@ -172,7 +172,9 @@ Now that we have our data, let's set up our database code.
 
 Here's where we'll start using the knex library. In addition to the high level abstraction that it provides as an ORM, the other nice thing about knex is that it's API methods are all promisified. So whereas we'd normally have to interact with our database using callbacks (because database operations are almost always asynchronous), here we can use Promises instead. Nice!
 
-So let's do this. Let's start by commenting out or removing the code we were just playing with, and starting over. Again, let's think about what are steps are. What we need to do is:
+So let's do this. First, we'll need to create a database — let's call it `promise-test`. To create this database with PostgresQL, we can simply run `createdb promise-test`. (If that doesn't work, make sure that you have PostgresQL installed correctly.)
+
+Now let's comment out or remove the code we were just playing with so that we can start over. Again, let's think about what are steps are. What we need to do is:
 
 1. Check to see if we have the needed table in our database; if not, create it.
 2. Fetch the list of markets from the USDA servers.
