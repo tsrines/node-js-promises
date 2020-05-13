@@ -18,10 +18,13 @@ const pg = require('knex')({
 
 var queryUSDAFarmersMarkets = (zipCode) => {
   return new Promise((resolve, reject) => {
-    const baseUrl = 'http://search.ms.usda.gov/farmersmarkets/v1/data.svc/zipSearch?zip=';
+    const baseUrl = 'http://search.ams.usda.gov/farmersmarkets/v1/data.svc/zipSearch?zip=';
     request(baseUrl + zipCode, (err, resp, body) => {
-      if (err) reject(err);
+      if (err) console.log(err);
       resolve(body);
     });
   });
 };
+
+// queryUSDAFarmersMarkets(29405).then(resp => console.log(resp.json())).catch(err => console.log(err.message))
+queryUSDAFarmersMarkets(10004).then(resp => console.log(resp))
